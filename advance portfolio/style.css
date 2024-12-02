@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Header Section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-weight: 680;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: rgb(255, 69, 0);
+    text-shadow: 0 0 25px rgb(255, 69, 0), 0 0 50px orangered;
+}
+
+span {
+    color: orangered;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin: 0 15px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh; /* Full viewport height */
+}
+.blurry-div {
+   
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    background: rgb(255, 255, 255);
+    
+    border-radius: 15px;
+    
+    overflow: hidden;
+  }
+
+  .text {
+    font-size: 6rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    opacity: 30%;
+    animation: changeText 8s infinite;
+  }
+
+  @keyframes changeText {
+    0% {
+      content: "ENGINEER";
+    }
+    33% {
+      content: "CREATOR";
+    }
+    66% {
+      content: "DEVELOPER";
+    }
+  }
+
+  /* Optional: Fallback text content switching using `::after` */
+  .text::after {
+    content: "ENGINEER";
+    animation: textCycle 3s infinite;
+  }
+
+  @keyframes textCycle {
+    0%, 33% {
+      content: "ENGINEER";
+    }
+    34%, 66% {
+      content: "CREATOR";
+    }
+    67%, 100% {
+      content: "DEVELOPER";
+    }
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .content-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  .content-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
